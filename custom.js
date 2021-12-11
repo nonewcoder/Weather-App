@@ -12,7 +12,7 @@ window.addEventListener("load",()=>{
                 lat=position.coords.latitude;
                 lang= position.coords.longitude;
 
-                query=`http://api.weatherapi.com/v1/current.json?key=53b8bd0a6df2473f82b112428211112&q=${lat},${lang}&aqi=no`;
+                query=`https://api.weatherapi.com/v1/current.json?key=53b8bd0a6df2473f82b112428211112&q=${lat},${lang}&aqi=no`;
 
 
                 fetch(query)
@@ -47,9 +47,3 @@ window.addEventListener("load",()=>{
     
 
 });
-document.getElementById("image").addEventListener('click',change);
-
-function change()
-{
-    document.getElementById("image").innerHTML="<img src='//cdn.weatherapi.com/weather/64x64/day/113.png'>"
-}
